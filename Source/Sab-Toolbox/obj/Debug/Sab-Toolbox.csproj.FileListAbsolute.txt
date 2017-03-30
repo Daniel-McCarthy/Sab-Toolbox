@@ -25,3 +25,21 @@ C:\Users\Dan\Dropbox\Public\visual studio 2015\Projects\Sab-Toolbox\Sab-Toolbox\
 C:\Users\Dan\Dropbox\Public\visual studio 2015\Projects\Sab-Toolbox\Sab-Toolbox\obj\Debug\Sab_Toolbox.Megapack_Editor.resources
 C:\Users\Dan\Dropbox\Public\visual studio 2015\Projects\Sab-Toolbox\Sab-Toolbox\obj\Debug\Sab_Toolbox.Pack_Editor.resources
 C:\Users\Dan\Dropbox\Public\visual studio 2015\Projects\Sab-Toolbox\Sab-Toolbox\obj\Debug\Sab_Toolbox.EditNodes_Editor.resources
+C:\Users\Dan\Dropbox\Public\Github Repos\Sab-Toolbox\Source\Sab-Toolbox\bin\Debug\Sab-Toolbox.exe.config
+C:\Users\Dan\Dropbox\Public\Github Repos\Sab-Toolbox\Source\Sab-Toolbox\obj\Debug\Sab-Toolbox.exe
+C:\Users\Dan\Dropbox\Public\Github Repos\Sab-Toolbox\Source\Sab-Toolbox\obj\Debug\Sab-Toolbox.pdb
+C:\Users\Dan\Dropbox\Public\Github Repos\Sab-Toolbox\Source\Sab-Toolbox\bin\Debug\Sab-Toolbox.exe
+C:\Users\Dan\Dropbox\Public\Github Repos\Sab-Toolbox\Source\Sab-Toolbox\bin\Debug\Sab-Toolbox.pdb
+C:\Users\Dan\Dropbox\Public\Github Repos\Sab-Toolbox\Source\Sab-Toolbox\obj\Debug\Sab-Toolbox.csprojResolveAssemblyReference.cache
+C:\Users\Dan\Dropbox\Public\Github Repos\Sab-Toolbox\Source\Sab-Toolbox\obj\Debug\Sab_Toolbox.Blueprint_Editor.resources
+C:\Users\Dan\Dropbox\Public\Github Repos\Sab-Toolbox\Source\Sab-Toolbox\obj\Debug\Sab_Toolbox.EditNodes_Editor.resources
+C:\Users\Dan\Dropbox\Public\Github Repos\Sab-Toolbox\Source\Sab-Toolbox\obj\Debug\Sab_Toolbox.Loosefiles_Editor.resources
+C:\Users\Dan\Dropbox\Public\Github Repos\Sab-Toolbox\Source\Sab-Toolbox\obj\Debug\Sab_Toolbox.LuaScript_Editor.resources
+C:\Users\Dan\Dropbox\Public\Github Repos\Sab-Toolbox\Source\Sab-Toolbox\obj\Debug\Sab_Toolbox.Megapack_Editor.resources
+C:\Users\Dan\Dropbox\Public\Github Repos\Sab-Toolbox\Source\Sab-Toolbox\obj\Debug\Sab_Toolbox.Pack_Editor.resources
+C:\Users\Dan\Dropbox\Public\Github Repos\Sab-Toolbox\Source\Sab-Toolbox\obj\Debug\Sab_Toolbox.Properties.Resources.resources
+C:\Users\Dan\Dropbox\Public\Github Repos\Sab-Toolbox\Source\Sab-Toolbox\obj\Debug\Sab_Toolbox.Sabtool_About.resources
+C:\Users\Dan\Dropbox\Public\Github Repos\Sab-Toolbox\Source\Sab-Toolbox\obj\Debug\Sab_Toolbox.Sabtool_Launcher.resources
+C:\Users\Dan\Dropbox\Public\Github Repos\Sab-Toolbox\Source\Sab-Toolbox\obj\Debug\Sab_Toolbox.Sabtool_Settings.resources
+C:\Users\Dan\Dropbox\Public\Github Repos\Sab-Toolbox\Source\Sab-Toolbox\obj\Debug\Sab_Toolbox.Sabtool_Thanks.resources
+C:\Users\Dan\Dropbox\Public\Github Repos\Sab-Toolbox\Source\Sab-Toolbox\obj\Debug\Sab-Toolbox.csproj.GenerateResource.Cache

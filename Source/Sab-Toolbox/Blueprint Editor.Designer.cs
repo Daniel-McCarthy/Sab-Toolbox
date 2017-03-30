@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Blueprint_Editor));
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Weapons");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Bullets");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Ammo Clips");
@@ -49,7 +50,6 @@
             System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Props");
             System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Will To Fight");
             System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Cameras");
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Blueprint_Editor));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generateNewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -100,8 +100,8 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.menuStrip1.BackgroundImage = global::Sab_Toolbox.Properties.Resources.Official_Saboteur_Game_Cover_Art;
+            this.menuStrip1.BackColor = System.Drawing.Color.Orchid;
+            this.menuStrip1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("menuStrip1.BackgroundImage")));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.editToolStripMenuItem,

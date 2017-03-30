@@ -87,7 +87,7 @@ namespace Sab_Toolbox
 
 
 
-        private void dLCBlueprintsToolStripMenuItem_Click(object sender, EventArgs e) //Open/ GameTemplates.wsd
+        private void dLCBlueprintsToolStripMenuItem_Click(object sender, EventArgs e) //Open/ DLC GameTemplates.wsd
         {
             string path = returnGamePath();
             switch (path)
