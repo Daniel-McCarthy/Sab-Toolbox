@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B56B44E7-4B61-4AEA-8AFE-960286D24E45}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sab_Toolbox</RootNamespace>
+    <AssemblyName>Sab-Toolbox</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Blueprint Editor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blueprint Editor.Designer.cs">
+      <DependentUpon>Blueprint Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditNodes Editor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditNodes Editor.Designer.cs">
+      <DependentUpon>EditNodes Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loosefiles Editor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loosefiles Editor.Designer.cs">
+      <DependentUpon>Loosefiles Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LuaScript Editor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LuaScript Editor.Designer.cs">
+      <DependentUpon>LuaScript Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Megapack Editor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Megapack Editor.Designer.cs">
+      <DependentUpon>Megapack Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pack Editor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pack Editor.Designer.cs">
+      <DependentUpon>Pack Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sabtool About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sabtool About.Designer.cs">
+      <DependentUpon>Sabtool About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sabtool Launcher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sabtool Launcher.Designer.cs">
+      <DependentUpon>Sabtool Launcher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sabtool Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sabtool Settings.Designer.cs">
+      <DependentUpon>Sabtool Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sabtool Thanks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sabtool Thanks.Designer.cs">
+      <DependentUpon>Sabtool Thanks.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Blueprint Editor.resx">
+      <DependentUpon>Blueprint Editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditNodes Editor.resx">
+      <DependentUpon>EditNodes Editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loosefiles Editor.resx">
+      <DependentUpon>Loosefiles Editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LuaScript Editor.resx">
+      <DependentUpon>LuaScript Editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Megapack Editor.resx">
+      <DependentUpon>Megapack Editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pack Editor.resx">
+      <DependentUpon>Pack Editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Sabtool About.resx">
+      <DependentUpon>Sabtool About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sabtool Launcher.resx">
+      <DependentUpon>Sabtool Launcher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sabtool Settings.resx">
+      <DependentUpon>Sabtool Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sabtool Thanks.resx">
+      <DependentUpon>Sabtool Thanks.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\config.txt" />
+    <None Include="Resources\Official_Saboteur_Game_Cover_Art2.png" />
+    <Content Include="Resources\Saboteur.ico" />
+    <Content Include="Resources\Saboteur2.ico" />
+    <Content Include="Resources\Saboteur3.ico" />
+    <Content Include="Resources\Saboteur4.ico" />
+    <Content Include="Resources\Saboteur5.ico" />
+    <Content Include="Resources\Saboteur6.ico" />
+    <None Include="Resources\Official_Saboteur_Game_Cover_Art.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Box1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Box2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Box3.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
