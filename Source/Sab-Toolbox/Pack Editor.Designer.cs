@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pack_Editor));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.packFileTreeView = new System.Windows.Forms.TreeView();
-            this.treeView2 = new System.Windows.Forms.TreeView();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.packFileTreeView = new System.Windows.Forms.TreeView();
+            this.treeView2 = new System.Windows.Forms.TreeView();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,22 +57,6 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
-            // packFileTreeView
-            // 
-            this.packFileTreeView.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.packFileTreeView.Location = new System.Drawing.Point(652, 27);
-            this.packFileTreeView.Name = "packFileTreeView";
-            this.packFileTreeView.Size = new System.Drawing.Size(223, 409);
-            this.packFileTreeView.TabIndex = 1;
-            // 
-            // treeView2
-            // 
-            this.treeView2.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.treeView2.Location = new System.Drawing.Point(2, 27);
-            this.treeView2.Name = "treeView2";
-            this.treeView2.Size = new System.Drawing.Size(162, 409);
-            this.treeView2.TabIndex = 2;
-            // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
@@ -86,6 +70,22 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // packFileTreeView
+            // 
+            this.packFileTreeView.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.packFileTreeView.Location = new System.Drawing.Point(611, 27);
+            this.packFileTreeView.Name = "packFileTreeView";
+            this.packFileTreeView.Size = new System.Drawing.Size(264, 409);
+            this.packFileTreeView.TabIndex = 1;
+            // 
+            // treeView2
+            // 
+            this.treeView2.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.treeView2.Location = new System.Drawing.Point(2, 27);
+            this.treeView2.Name = "treeView2";
+            this.treeView2.Size = new System.Drawing.Size(162, 409);
+            this.treeView2.TabIndex = 2;
             // 
             // Pack_Editor
             // 

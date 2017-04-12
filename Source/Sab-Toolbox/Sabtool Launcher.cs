@@ -81,7 +81,7 @@ namespace Sab_Toolbox
                 {
                     //This is the correct folder.
                     pictureBox5.Image = Properties.Resources.Box2;
-                    MessageBox.Show("This is The Saboteur folder.");
+                    //MessageBox.Show("This is The Saboteur folder.");
                     pathValidated = true;
 
 
@@ -95,7 +95,7 @@ namespace Sab_Toolbox
                         if (!File.Exists(Path.Combine(path, "settings.txt")))
                         {
                             //Settings Do Not Exist, User Wants Path Saved, Create Settings File
-                            File.WriteAllText(path, Properties.Resources.config);
+                            File.WriteAllText(Path.Combine(path, "settings.txt"), Properties.Resources.config);
                         }
 
                         //Read Settings File and Write Path To First Line
@@ -113,7 +113,7 @@ namespace Sab_Toolbox
                         {
                             output += lines[i] + "\n";
                         }
-                        MessageBox.Show(path);
+                        //MessageBox.Show(path);
                         System.IO.File.WriteAllText(Path.Combine(path,"settings.txt"), output);
                     }
 
