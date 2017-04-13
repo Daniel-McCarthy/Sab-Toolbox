@@ -45,7 +45,7 @@ namespace Sab_Toolbox
 
         private void luaScriptsluapToolStripMenuItem_Click(object sender, EventArgs e) //Directly loads the LuaScripts.luap file from game location.
         {
-            string path = returnGamePath();
+            string path = Sabtool_Settings.returnGamePath();
             switch (path)
             {
                 case "PathInvalid":
@@ -298,46 +298,6 @@ namespace Sab_Toolbox
         }
 
 
-
-        public static string returnGamePath()
-        {
-            string path = Application.ExecutablePath;
-            path = path.Substring(0, path.Length - 15);
-
-            //Does Settings File Exist?
-            if (File.Exists(Path.Combine(path, "settings.txt")))
-            {
-                //Settings Exist, Now Check Path Setting
-                string[] readText = File.ReadAllLines(Path.Combine(path, "settings.txt"));
-                string pathInput = readText[0];
-                if (pathInput.Length > 5)
-                {
-                    //Check if Path Setting Is Valid
-                    pathInput = pathInput.Substring(5, pathInput.Length - 5);
-                    if (File.Exists(Path.Combine(pathInput, "Saboteur.exe")))
-                    {
-                        //It is, now set up path and image to tell user their path is set.
-                        return pathInput;
-                    }
-                    else
-                    {
-                        //The setting is no longer valid
-                        return "PathInvalid";
-                    }
-
-                }
-                else
-                {
-                    //The setting is no longer valid
-                    return "NoSettingsFile";
-                }
-            }
-            else
-            {
-                //The setting is no longer valid
-                return "NoSettingsFile";
-            }
-        } //Returns current path of the program, minus the application's exe.
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
