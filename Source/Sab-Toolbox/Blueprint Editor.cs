@@ -135,20 +135,19 @@ namespace Sab_Toolbox
 
             if (!versionNumber.Equals("AULB")) //Check position in the file, if it's not at the start, skip and check if we have skipped to the correct start position
             {
-                binReader1.ReadBytes(116);
+                fileInput.Seek(116, SeekOrigin.Current);
                  versionNumber = System.Text.Encoding.Default.GetString(binReader1.ReadBytes(4));
             }
             if (versionNumber.Equals("AULB")) 
             {
                 fileCount = binReader1.ReadInt32(); //Read how many files will need to be extracted
 
-                progressBar1.Maximum = fileCount + 4; //4 to accomodate bytes already read
-
+                progressBar1.Maximum = fileCount + 4;
                 progressBar1.Visible = true;
 
                 //for (int i = 0; i < fileCount; i++) //Because the filecount is not always correct.. we have to use a more dynamic way to iterate
                 int i = 0;
-                while(fileInput.Position != fileInput.Length -1 && fileInput.Position != fileInput.Length) //While we're not at the end..
+                while(fileInput.Position < fileInput.Length - 1) //While we're not at the end..
                 {
 
                     int size = binReader1.ReadInt32();
@@ -177,7 +176,7 @@ namespace Sab_Toolbox
                     
 
                     byte[] blueprint = null;
-                    blueprint = binReader1.ReadBytes((size) - 12 - nameLength - 4 - subtypeLength); //Read in the header data.
+                    blueprint = binReader1.ReadBytes((size) - 12 - nameLength - 4 - subtypeLength); //read in file data, ignore header
 
 
                     listOfFileArrays.Add(blueprint); //Add extracted file's bytes to list of the data files
@@ -197,7 +196,7 @@ namespace Sab_Toolbox
                     //Console.Write(" Name: " + name);
 
                     //if (i != fileCount)
-                    if (fileInput.Position != fileInput.Length - 1 && fileInput.Position != fileInput.Length)
+                    if (fileInput.Position < fileInput.Length - 1)
                     {
                         while (binReader1.ReadInt32() == 8)
                         {
