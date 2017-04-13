@@ -63,7 +63,7 @@ namespace Sab_Toolbox
                 if (i != fileCount) //Keeps from reading after last file
                 {
                     offset = fileInputReader1.ReadInt32();
-                    zero = fileInputReader1.ReadInt32(); //This is supposed to be zero, but is read because if there is a problem with reading, and it reads something non-0, a bug can easily be spotted.
+                    zero = fileInputReader1.ReadInt32(); //This is supposed to be zero. It is read anyways to debug if it is non-zero.
                 }
                 fileSizes[i] = size;
                 //MessageBox.Show("Hash: " + hash + " Size: " + size + " Offset: " + offset + " Zero: " + zero);
@@ -71,7 +71,7 @@ namespace Sab_Toolbox
 
             //Some of these megapacks have extra header data for some other sort of archive.
             //You'll need to figure out the format. Good luck and god speed.
-            //In the mean time I'm going to write a shitty little hack to skip them.
+            //In the mean time I'm just going to skip them.
 
 
             string character = System.Text.Encoding.Default.GetString(fileInputReader1.ReadBytes(1));
@@ -79,11 +79,11 @@ namespace Sab_Toolbox
 
             if (character == "Ë") //This forms the basis for reading the rest of the headers. (This should be the character for the 00 hex .)
             {
-                //MessageBox.Show("GOOALLL");
+                //MessageBox.Show("End of standard SBLA file.");
             }
             else
             {
-                //MessageBox.Show("There's still more headers, fucker!");
+                //MessageBox.Show("There's still more headers!");
             }
 
             fileInput.Seek(0, 0);
@@ -140,7 +140,7 @@ namespace Sab_Toolbox
                 string magicNumber = reverseString(Encoding.Default.GetString(fileInputReader1.ReadBytes(4)));
                 //MessageBox.Show(magicNumber);
 
-                fileInputReader1.ReadBytes(4); //Skipping 4 0's to get to second magic number
+                fileInput.Seek(4, SeekOrigin.Current); //Skipping 4 0's to get to second magic number
                 string secondMagicNumber = reverseString(Encoding.Default.GetString(fileInputReader1.ReadBytes(4)));
 
 
@@ -425,9 +425,8 @@ namespace Sab_Toolbox
                 }
 
             }
-            string fileName = openFileDialog1.FileName;
-            fileName = fileName.Substring(fileName.LastIndexOf('\\') + 1); //Grabs filename, substrings to remove path and leave only name + extension.
-            this.Text = "Sab - Toolbox v 0.0 - Megapack Editor - " + fileName;
+            FileInfo fileName = new FileInfo(openFileDialog1.FileName);
+            this.Text = "Sab - Toolbox v 0.0 - Megapack Editor - " + fileName.Name;
         }
 
 
