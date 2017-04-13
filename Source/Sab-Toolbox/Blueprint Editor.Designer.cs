@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Blueprint_Editor));
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Weapons");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Bullets");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Ammo Clips");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Weapons", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3});
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Vehicles");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Engines");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Transmissions");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Chassis");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Wheels");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Vehicles", new System.Windows.Forms.TreeNode[] {
-            treeNode5,
-            treeNode6,
-            treeNode7,
-            treeNode8,
-            treeNode9});
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Props");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Will To Fight");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Cameras");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Weapons");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Bullets");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Ammo Clips");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Weapons", new System.Windows.Forms.TreeNode[] {
+            treeNode14,
+            treeNode15,
+            treeNode16});
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Vehicles");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Engines");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Transmissions");
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Chassis");
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Wheels");
+            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Vehicles", new System.Windows.Forms.TreeNode[] {
+            treeNode18,
+            treeNode19,
+            treeNode20,
+            treeNode21,
+            treeNode22});
+            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Props");
+            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Will To Fight");
+            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Cameras");
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generateNewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -77,11 +77,6 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Blueprints = new System.Windows.Forms.TreeView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -90,6 +85,11 @@
             this.printListButton = new System.Windows.Forms.Button();
             this.extractBlueprintsButton = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -230,38 +230,38 @@
             // 
             this.treeView1.Location = new System.Drawing.Point(761, 54);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "weaponsChild";
-            treeNode1.Text = "Weapons";
-            treeNode2.Name = "bulletsChild";
-            treeNode2.Text = "Bullets";
-            treeNode3.Name = "ammoClipChild";
-            treeNode3.Text = "Ammo Clips";
-            treeNode4.Name = "weaponsTree";
-            treeNode4.Text = "Weapons";
-            treeNode5.Name = "vehiclesChild";
-            treeNode5.Text = "Vehicles";
-            treeNode6.Name = "engineChild";
-            treeNode6.Text = "Engines";
-            treeNode7.Name = "transmissionChild";
-            treeNode7.Text = "Transmissions";
-            treeNode8.Name = "chassisChild";
-            treeNode8.Text = "Chassis";
-            treeNode9.Name = "wheelsChild";
-            treeNode9.Text = "Wheels";
-            treeNode10.Name = "vehicleTree";
-            treeNode10.Text = "Vehicles";
-            treeNode11.Name = "propsTree";
-            treeNode11.Text = "Props";
-            treeNode12.Name = "wtfTree";
-            treeNode12.Text = "Will To Fight";
-            treeNode13.Name = "camerasTree";
-            treeNode13.Text = "Cameras";
+            treeNode14.Name = "weaponsChild";
+            treeNode14.Text = "Weapons";
+            treeNode15.Name = "bulletsChild";
+            treeNode15.Text = "Bullets";
+            treeNode16.Name = "ammoClipChild";
+            treeNode16.Text = "Ammo Clips";
+            treeNode17.Name = "weaponsTree";
+            treeNode17.Text = "Weapons";
+            treeNode18.Name = "vehiclesChild";
+            treeNode18.Text = "Vehicles";
+            treeNode19.Name = "engineChild";
+            treeNode19.Text = "Engines";
+            treeNode20.Name = "transmissionChild";
+            treeNode20.Text = "Transmissions";
+            treeNode21.Name = "chassisChild";
+            treeNode21.Text = "Chassis";
+            treeNode22.Name = "wheelsChild";
+            treeNode22.Text = "Wheels";
+            treeNode23.Name = "vehicleTree";
+            treeNode23.Text = "Vehicles";
+            treeNode24.Name = "propsTree";
+            treeNode24.Text = "Props";
+            treeNode25.Name = "wtfTree";
+            treeNode25.Text = "Will To Fight";
+            treeNode26.Name = "camerasTree";
+            treeNode26.Text = "Cameras";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode4,
-            treeNode10,
-            treeNode11,
-            treeNode12,
-            treeNode13});
+            treeNode17,
+            treeNode23,
+            treeNode24,
+            treeNode25,
+            treeNode26});
             this.treeView1.Size = new System.Drawing.Size(202, 457);
             this.treeView1.TabIndex = 14;
             // 
@@ -334,37 +334,6 @@
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.Size = new System.Drawing.Size(512, 455);
             this.dataGridView1.TabIndex = 15;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Hash Identifier";
-            this.Column1.Name = "Column1";
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Data Value (Hex)";
-            this.Column2.Name = "Column2";
-            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Data Value (Int32/Float)";
-            this.Column4.Name = "Column4";
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Size";
-            this.Column3.Name = "Column3";
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "i";
-            this.Column5.Name = "Column5";
-            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // button1
             // 
@@ -446,6 +415,39 @@
             this.progressBar1.TabIndex = 25;
             this.progressBar1.Visible = false;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Hash Identifier";
+            this.Column1.Name = "Column1";
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Data Value (Hex)";
+            this.Column2.Name = "Column2";
+            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Data Value (Int32/Float)";
+            this.Column4.Name = "Column4";
+            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Column4.Width = 170;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Size";
+            this.Column3.Name = "Column3";
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Column3.Width = 40;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "i";
+            this.Column5.Name = "Column5";
+            this.Column5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
             // Blueprint_Editor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -512,11 +514,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
@@ -528,5 +525,10 @@
         private System.Windows.Forms.Button printListButton;
         private System.Windows.Forms.Button extractBlueprintsButton;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }
