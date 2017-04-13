@@ -32,8 +32,8 @@ namespace Sab_Toolbox
 
         private void Pack_Editor_Load(object sender, EventArgs e)
         {
-            string path = returnGamePath();
-            if(path != "PathInvalid" && path != "NoSettingsFile")
+            string path = Sabtool_Settings.returnGamePath();
+            if (path != "PathInvalid" && path != "NoSettingsFile")
             {
                 String[] allPackFiles = System.IO.Directory.GetFiles(path, "*.pack*", System.IO.SearchOption.AllDirectories);
                 String[] allDynPackFiles = System.IO.Directory.GetFiles(path, "*.dynpack*", System.IO.SearchOption.AllDirectories);
@@ -104,48 +104,6 @@ namespace Sab_Toolbox
 
             }
         }
-
-        public static string returnGamePath()
-        {
-            string path = Application.ExecutablePath;
-            path = path.Substring(0, path.Length - 15); //Gets the path of the program, minus the application's executable name.
-
-            //Does Settings File Exist?
-            if (File.Exists(Path.Combine(path, "settings.txt"))) //If settings file already generated
-            {
-                //Settings Exist, Now Check Path Setting
-                string[] readText = File.ReadAllLines(Path.Combine(path, "settings.txt"));
-                string pathInput = readText[0];
-                if (pathInput.Length > 5)
-                {
-                    //Check if Path Setting Is Valid
-                    pathInput = pathInput.Substring(5, pathInput.Length - 5);
-                    if (File.Exists(Path.Combine(pathInput, "Saboteur.exe")))
-                    {
-                        //It is, now set up path and image to tell user their path is set.
-                        return pathInput;
-                    }
-                    else
-                    {
-                        //The setting is no longer valid
-                        return "PathInvalid";
-                    }
-
-                }
-                else
-                {
-                    //The setting is no longer valid
-                    return "NoSettingsFile";
-                }
-            }
-            else
-            {
-                //The setting is no longer valid
-                return "NoSettingsFile";
-            }
-
-
-        } //Read game's path location from settings file.
 
 
         String[] removeAt(int index, String[] arr)

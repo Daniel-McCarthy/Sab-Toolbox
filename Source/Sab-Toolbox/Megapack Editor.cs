@@ -457,47 +457,6 @@ namespace Sab_Toolbox
             return returnString;
         } //If string contains characters not found in the containRequirements it removes them and returns a new string.
 
-        public static string returnGamePath()
-        {
-            string path = Application.ExecutablePath; 
-            path = path.Substring(0, path.Length - 15); //Gets the path of the program, minus the application's executable name.
-
-            //Does Settings File Exist?
-            if (File.Exists(Path.Combine(path, "settings.txt"))) //If settings file already generated
-            {
-                //Settings Exist, Now Check Path Setting
-                string[] readText = File.ReadAllLines(Path.Combine(path, "settings.txt"));
-                string pathInput = readText[0];
-                if (pathInput.Length > 5)
-                {
-                    //Check if Path Setting Is Valid
-                    pathInput = pathInput.Substring(5, pathInput.Length - 5);
-                    if (File.Exists(Path.Combine(pathInput, "Saboteur.exe")))
-                    {
-                        //It is, now set up path and image to tell user their path is set.
-                        return pathInput;
-                    }
-                    else
-                    {
-                        //The setting is no longer valid
-                        return "PathInvalid";
-                    }
-
-                }
-                else
-                {
-                    //The setting is no longer valid
-                    return "NoSettingsFile";
-                }
-            }
-            else
-            {
-                //The setting is no longer valid
-                return "NoSettingsFile";
-            }
-
-
-        } //Read game's path location from settings file.
 
         private string reverseString(string textInput)
         {
@@ -511,7 +470,7 @@ namespace Sab_Toolbox
 
         private void mega0megapackToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string path = returnGamePath();
+            string path = Sabtool_Settings.returnGamePath();
             switch (path)
             {
                 case "PathInvalid":
@@ -558,7 +517,7 @@ namespace Sab_Toolbox
 
         private void mega1megapackToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string path = returnGamePath();
+            string path = Sabtool_Settings.returnGamePath();
             switch (path)
             {
                 case "PathInvalid":
@@ -608,7 +567,7 @@ namespace Sab_Toolbox
 
         private void mega2megapackToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string path = returnGamePath();
+            string path = Sabtool_Settings.returnGamePath();
             switch (path)
             {
                 case "PathInvalid":
@@ -655,7 +614,7 @@ namespace Sab_Toolbox
 
         private void start0kiloPackToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string path = returnGamePath();
+            string path = Sabtool_Settings.returnGamePath();
             switch (path)
             {
                 case "PathInvalid":
@@ -704,7 +663,7 @@ namespace Sab_Toolbox
 
         private void startGerman0kiloPackToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string path = returnGamePath();
+            string path = Sabtool_Settings.returnGamePath();
             switch (path)
             {
                 case "PathInvalid":
@@ -751,7 +710,7 @@ namespace Sab_Toolbox
 
         private void belleStart0kiloPackToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string path = returnGamePath();
+            string path = Sabtool_Settings.returnGamePath();
             switch (path)
             {
                 case "PathInvalid":
@@ -798,7 +757,7 @@ namespace Sab_Toolbox
 
         private void dynamic0megapackToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string path = returnGamePath();
+            string path = Sabtool_Settings.returnGamePath();
             switch (path)
             {
                 case "PathInvalid":
@@ -845,7 +804,7 @@ namespace Sab_Toolbox
 
         private void palettes0megapackToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string path = returnGamePath();
+            string path = Sabtool_Settings.returnGamePath();
             switch (path)
             {
                 case "PathInvalid":
@@ -892,7 +851,7 @@ namespace Sab_Toolbox
 
         private void dlc01mega0megapackToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string path = returnGamePath();
+            string path = Sabtool_Settings.returnGamePath();
             switch (path)
             {
                 case "PathInvalid":
@@ -942,7 +901,7 @@ namespace Sab_Toolbox
 
         private void dynamic0megapackToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            string path = returnGamePath();
+            string path = Sabtool_Settings.returnGamePath();
             switch (path)
             {
                 case "PathInvalid":
