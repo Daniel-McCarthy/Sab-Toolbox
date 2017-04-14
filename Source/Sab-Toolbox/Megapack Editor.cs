@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.IO.Compression;
@@ -32,7 +27,6 @@ namespace Sab_Toolbox
             {
                 BinaryReader anonymousFileReader1 = new BinaryReader(fileInput);
                 String textMagicNumber = System.Text.Encoding.Default.GetString(anonymousFileReader1.ReadBytes(4));
-                //MessageBox.Show("Magic Number: " + reverseString(textMagicNumber));
                 if (reverseString(textMagicNumber) == "MP00") return DialogResult.OK;
                 else return DialogResult.No;
 
@@ -119,9 +113,6 @@ namespace Sab_Toolbox
                 parsedSBLAFiles.Add(fileInputReader1.ReadBytes(fileSizes[i])); //The file size has been saved to a list previously, now we read that many bytes to get the file.
                 treeView1.Nodes.Add(i + ".sbla"); //Add the number + file extension to treeview. (SBLA files have no names, so number is best option.)
 
-                //MemoryStream SBLAStream = new MemoryStream(parsedSBLAFiles[i]);
-                //FileStream banana = new FileStream("C:\\Users\\Dan\\Desktop\\sblas\\" + i + ".sbla", FileMode.Create, FileAccess.Write);
-                //SBLAStream.WriteTo(banana);
             }
             extractButton.Enabled = true;
             parseSBLAFiles();
@@ -138,7 +129,6 @@ namespace Sab_Toolbox
                 BinaryReader fileInputReader1 = new BinaryReader(sblaStream);
 
                 string magicNumber = reverseString(Encoding.Default.GetString(fileInputReader1.ReadBytes(4)));
-                //MessageBox.Show(magicNumber);
 
                 fileInput.Seek(4, SeekOrigin.Current); //Skipping 4 0's to get to second magic number
                 string secondMagicNumber = reverseString(Encoding.Default.GetString(fileInputReader1.ReadBytes(4)));
@@ -148,7 +138,7 @@ namespace Sab_Toolbox
                 if (magicNumber == "SBLA" && secondMagicNumber != "\0\0\0\0" && sbla.Length > 8)
                 {
                     //MessageBox.Show("Position: " + sblaStream.Position + " Length: " + sblaStream.Length);
-                    //MessageBox.Show(parsedSBLAFiles.Count.ToString());
+
 
                     List<int> fileSizes = new List<int>();
                     List<int> offsets = new List<int>();
@@ -252,18 +242,7 @@ namespace Sab_Toolbox
                                     mshaReader1.ReadBytes(20);
                                     string fileName = Encoding.Default.GetString(mshaReader1.ReadBytes(100));
                                     fileName = stringContainsOnly(fileName, "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_");
-                                    //MessageBox.Show(fileName.Length + "\"" + fileName + "\"");
 
-                                    if (!Directory.Exists("C:\\Users\\Dan\\Desktop\\mshas\\" + sblaNumber + "\\"))
-                                    {
-                                        Directory.CreateDirectory("C:\\Users\\Dan\\Desktop\\mshas\\" + sblaNumber + "\\");
-                                    }
-
-                                    using (FileStream banana = new FileStream("C:\\Users\\Dan\\Desktop\\mshas\\" + sblaNumber + "\\" + i + " - " + fileName + ".msha", FileMode.Create, FileAccess.Write))
-                                    {
-                                        MSHAStream.WriteTo(banana);
-                                        banana.Dispose();
-                                    }
 
                                     if (treeView1.Nodes[sblaNumber - 1] != null)
                                     {
@@ -279,31 +258,6 @@ namespace Sab_Toolbox
                                     zlibFiles.Add(file);
                                     MemoryStream ZLIBStream = new MemoryStream(zlibFiles[zlibI]);
                                     BinaryReader zlibStreamReader1 = new BinaryReader(ZLIBStream);
-
-                                    if (!Directory.Exists("C:\\Users\\Dan\\Desktop\\zlibs\\" + sblaNumber + "\\"))
-                                    {
-                                        Directory.CreateDirectory("C:\\Users\\Dan\\Desktop\\zlibs\\" + sblaNumber + "\\");
-                                    }
-
-                                    using (FileStream banana = new FileStream("C:\\Users\\Dan\\Desktop\\zlibs\\" + sblaNumber + "\\" + i + ".zlib", FileMode.Create, FileAccess.Write))
-                                    {
-                                        ZLIBStream.WriteTo(banana);
-                                        banana.Dispose();
-                                    }
-
-                                    //ZLIBStream.ReadByte();
-                                    //ZLIBStream.ReadByte();
-
-                                    //DeflateStream deflateStream1 = new DeflateStream(ZLIBStream, CompressionMode.Decompress);
-                                    // MemoryStream decompressedStream = new MemoryStream();
-
-
-
-
-
-                                    //deflateStream1.CopyTo(decompressedStream);
-                                    //FileStream banana2 = new FileStream("C:\\Users\\Dan\\Desktop\\" + i + "decompressed.zlib", FileMode.Create, FileAccess.Write);
-                                    //decompressedStream.WriteTo(banana2);
 
                                     if (treeView1.Nodes[sblaNumber - 1] != null)
                                     {
@@ -321,17 +275,6 @@ namespace Sab_Toolbox
                                     MemoryStream cfxStream = new MemoryStream(cfxFiles[cfxI]);
                                     BinaryReader cfxStreamReader1 = new BinaryReader(cfxStream);
 
-
-                                    if (!Directory.Exists("C:\\Users\\Dan\\Desktop\\cfxs\\" + sblaNumber + "\\"))
-                                    {
-                                        Directory.CreateDirectory("C:\\Users\\Dan\\Desktop\\cfxs\\" + sblaNumber + "\\");
-                                    }
-
-                                    using (FileStream banana = new FileStream("C:\\Users\\Dan\\Desktop\\cfxs\\" + sblaNumber + "\\" + i + ".cfx", FileMode.Create, FileAccess.Write))
-                                    {
-                                        cfxStream.WriteTo(banana);
-                                        banana.Dispose();
-                                    }
 
                                     if (treeView1.Nodes[sblaNumber - 1] != null)
                                     {
@@ -351,21 +294,9 @@ namespace Sab_Toolbox
                                     string name = Encoding.Default.GetString(dxtStreamReader1.ReadBytes(nameLength));
                                     string extension = Encoding.Default.GetString(dxtStreamReader1.ReadBytes(4));
 
-                                    if (!Directory.Exists("C:\\Users\\Dan\\Desktop\\dxts\\" + sblaNumber + "\\"))
-                                    {
-                                        Directory.CreateDirectory("C:\\Users\\Dan\\Desktop\\dxts\\" + sblaNumber + "\\");
-                                    }
-
                                     if (extension != "DXT1" && extension != "DXT5")
                                     {
                                         extension = "MysteryDXT";
-                                    }
-
-                                    //FileStream banana = new FileStream("C:\\Users\\Dan\\Desktop\\dxts\\" + i + ".dxt", FileMode.Create, FileAccess.Write);
-                                    using (FileStream banana = new FileStream("C:\\Users\\Dan\\Desktop\\dxts\\" + sblaNumber + "\\" + name + "." + extension, FileMode.Create, FileAccess.Write))
-                                    {
-                                        dxtStream.WriteTo(banana);
-                                        banana.Dispose();
                                     }
 
                                     if (treeView1.Nodes[sblaNumber - 1] != null)
@@ -444,15 +375,11 @@ namespace Sab_Toolbox
                 if (!containRequirements.Contains(inputCharacter.ToString()))
                 {
                     int index = returnString.IndexOf(inputCharacter);
-                    //MessageBox.Show("Index: " + index + " Length: " + returnString.Length);
                     returnString = returnString.Substring(0, index);
                     i = returnString.Length + 1;
                 }
 
             }
-
-            //MessageBox.Show(inputText);
-            //MessageBox.Show(returnString);
 
             return returnString;
         } //If string contains characters not found in the containRequirements it removes them and returns a new string.
@@ -989,9 +916,7 @@ namespace Sab_Toolbox
                 int inputDiv1 = inputValue / 16;
 
                 int tenthPlace = inputDiv1 % 16;
-                //int inputDiv2 = inputDiv1 / 16;
 
-                //int hundrethPlace = inputDiv2 % 16 * 16;
 
                 finalHexByte += convertIntToHexDigit(tenthPlace) + convertIntToHexDigit(zeroPlace);
             }

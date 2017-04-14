@@ -108,7 +108,7 @@ namespace Sab_Toolbox
             BinaryReader binReader1 = new BinaryReader(fileInput);
 
             String versionNumber = System.Text.Encoding.Default.GetString(binReader1.ReadBytes(31)); //Check if we found the right file
-            //MessageBox.Show(versionNumber);
+
             if (versionNumber.Equals("France\\EditNodes\\EditNodes.pack"))
             {
                 fileInput.Seek(89, SeekOrigin.Current);
@@ -121,7 +121,6 @@ namespace Sab_Toolbox
             if (System.Text.Encoding.Default.GetString(binReader1.ReadBytes(4)) == "00ED")
             {
                 int fileCount = binReader1.ReadInt32();
-                //MessageBox.Show(fileCount.ToString());
 
                 for (int i = 0; i < fileCount; i++)
                 {
@@ -140,7 +139,6 @@ namespace Sab_Toolbox
                         byte[] file = binReader1.ReadBytes(fileSizes[i]);
                         listOfFileArrays.Add(file);
 
-                        //File.WriteAllBytes("C:\\Users\\Dan\\Desktop\\editnodes\\" + i + ".node", file);
                     }
                     else
                     {

@@ -250,7 +250,7 @@ namespace Sab_Toolbox
 
             fileInput.Seek(41107032, 0); //Skip all the data prior to GameTemplates.wsd
             String versionNumber = System.Text.Encoding.Default.GetString(binReader1.ReadBytes(17)); //Check if we found the right file
-            //MessageBox.Show(versionNumber);
+
             if (versionNumber.Equals("GameTemplates.wsd"))
             {
                 fileInput.Seek(41107032, 0); //if yes, go back to the start of the file
@@ -260,13 +260,8 @@ namespace Sab_Toolbox
 
                 MemoryStream gameTemplatesStream = new MemoryStream(gameTemplatesArray);
 
-                //Can write MemoryStream to a file. //Writes GameTemplates.wsd as extracted from Loosefiles.
-                //FileStream banana = new FileStream("C:\\Users\\Dan\\Desktop\\balls.txt", FileMode.Create, FileAccess.Write);
-                //gameTemplatesStream.WriteTo(banana);
-
                 binReader1.Dispose();
                 binReader1.Close();
-                //fileInput.Flush();
                 fileInput.Close();
 
                 fileInput = gameTemplatesStream;
@@ -300,8 +295,6 @@ namespace Sab_Toolbox
                     for (j = 1; j < StringBytes.Length && ByteBuffer[i + j] == StringBytes[j]; j++) ;
                     if (j == StringBytes.Length)
                     {
-                        //Console.WriteLine("String was found at offset {0}", i);
-                        //Console.WriteLine(i);
                         found = true;
                         offset = i;
                     }
@@ -314,11 +307,6 @@ namespace Sab_Toolbox
                 byte[] gameTemplatesArray = binReader1.ReadBytes(Convert.ToInt32(fileInput.Length) - offset);
                 MemoryStream gameTemplatesStream = new MemoryStream(gameTemplatesArray);
 
-
-                //FileStream banana = new FileStream("C:\\Users\\Dan\\Desktop\\balls2.txt", FileMode.Create, FileAccess.Write);
-                //gameTemplatesStream.WriteTo(banana);
-
-                //fileInput.Flush();
                 fileInput.Close();
                 fileInput = gameTemplatesStream;
                 binReader1.Dispose();
@@ -383,10 +371,8 @@ namespace Sab_Toolbox
         private void Blueprints_AfterSelect(object sender, TreeViewEventArgs e) // Else, load file node is associated with.
         {
             string name = e.Node.Text;
-            //MessageBox.Show(name);
 
 
-            
 
 
             if (fileNames.ContainsKey(name))
@@ -420,10 +406,9 @@ namespace Sab_Toolbox
                     {
                         hash += convertIntToHexByte(blueprintReader1.ReadByte());
                     }
-                    //MessageBox.Show(hash);
 
                     int dataSize = blueprintReader1.ReadInt32();
-                    //dataGridView1.AllowUserToAddRows = false;
+
                     string value = "";
 
                     progressBar1.Value += 8 + dataSize;
@@ -432,7 +417,6 @@ namespace Sab_Toolbox
                     {
                         case 1:
                             dataGridView1.Rows[i].Cells[0].Value = hash;
-                            //dataGridView1.Rows[i].Cells[1].Value = blueprintReader1.ReadByte();
                             dataGridView1.Rows[i].Cells[1].Value = convertIntToHexByte(blueprintReader1.ReadByte());
                             blueprint.Seek(blueprint.Position - 1, 0);
                             dataGridView1.Rows[i].Cells[2].Value = blueprintReader1.ReadByte();
@@ -519,7 +503,6 @@ namespace Sab_Toolbox
 
                     
                     //Console.WriteLine("#:" + i + " Hash: " + hash + " Data Size: " + dataSize + " success.");
-                    //if(i == 217) break;
                     i++;
 
                 }
@@ -561,8 +544,6 @@ namespace Sab_Toolbox
                 dataGridView2.Rows.Add();
             }
 
-            //Console.WriteLine("\"" + dataGridView1.Rows[2].Cells[0].Value + "\"");
-
             int currentRow = 0;
             for(int i2 = 0; i2 < dataGridView1.RowCount; i2++)
             {
@@ -572,7 +553,6 @@ namespace Sab_Toolbox
 
                     if (hash.Equals("5042725B")) //Model
                     {
-                        //MessageBox.Show(dataGridView1.Rows[i2].Cells[0].Value.ToString());
                         dataGridView2.Rows[currentRow].Cells[0].Value = "5042725B";
                         dataGridView2.Rows[currentRow].Cells[1].Value = "PBr[";
                         dataGridView2.Rows[currentRow].Cells[2].Value = "Model";
@@ -599,7 +579,6 @@ namespace Sab_Toolbox
 
                     if (hash.Equals("2A7235F5")) //HUD
                     {
-                        //MessageBox.Show(dataGridView1.Rows[i2].Cells[0].Value.ToString());
                         dataGridView2.Rows[currentRow].Cells[0].Value = "2A7235F5";
                         dataGridView2.Rows[currentRow].Cells[1].Value = "*r5.";
                         dataGridView2.Rows[currentRow].Cells[2].Value = "HUD Image";
@@ -629,16 +608,6 @@ namespace Sab_Toolbox
             progressBar1.Value = 0;
             
         }
-
-
-
-
-
-
-
-
-
-
 
 
 

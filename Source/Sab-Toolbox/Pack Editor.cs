@@ -47,9 +47,6 @@ namespace Sab_Toolbox
                 allFiles.Add(allCinPackFiles);
                 allFiles.Add(allCnvPackFiles);
 
-                //MessageBox.Show(path);
-                //MessageBox.Show(allPackFiles[0]);
-
                 foreach(String[] arr in allFiles)
                 {
                     foreach(string filePath in arr)

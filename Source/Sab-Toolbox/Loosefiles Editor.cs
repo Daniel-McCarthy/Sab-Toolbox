@@ -131,11 +131,8 @@ namespace Sab_Toolbox
                 default:
                     if (File.Exists(Path.Combine(path, "LuaScripts.luap")))
                     {
-                        //MessageBox.Show("LuaScripts.luap found.");
                         try
                         {
-                            //MessageBox.Show(path);
-                            //MessageBox.Show(path + "\\France\\Loosefiles_BinPC.pack");
                             fileInput = File.Open(path + "\\France\\Loosefiles_BinPC.pack", FileMode.Open);
                             loadLoosefiles();
                         }
@@ -182,8 +179,6 @@ namespace Sab_Toolbox
             //editNodesPack
             //gameTemplatesWSD
 
-            //FileStream banana = new FileStream("C:\\Users\\Dan\\Desktop\\balls.txt", FileMode.Create, FileAccess.Write);
-            //gameTemplatesStream.WriteTo(banana);
 
             
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
