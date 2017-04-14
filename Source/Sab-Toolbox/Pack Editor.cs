@@ -59,7 +59,7 @@ namespace Sab_Toolbox
                         {
                             using (BinaryReader binaryReader1 = new BinaryReader(fileStream))
                             {
-                                subType = reverseString(Encoding.Default.GetString(binaryReader1.ReadBytes(4)));
+                                subType = Utilities.reverseString(Encoding.Default.GetString(binaryReader1.ReadBytes(4)));
                             }
                         }
 
@@ -101,33 +101,6 @@ namespace Sab_Toolbox
 
             }
         }
-
-
-        String[] removeAt(int index, String[] arr)
-        {
-            String[] newArr = new String[arr.Length - 1];
-            int usedElements = 0;
-
-            for(int i = 0; i < arr.Length; i++)
-            {
-                if(i != index)
-                {
-                    newArr[usedElements] = arr[i];
-                    usedElements++;
-                }
-            }
-            return newArr;
-        }
-
-        private string reverseString(string textInput)
-        {
-            if (textInput == null) return null;
-
-            char[] array = textInput.ToCharArray();
-            Array.Reverse(array);
-            return new String(array);
-        }
-
 
 
     }

@@ -211,11 +211,6 @@ namespace Sab_Toolbox
                     extractBlueprintsButton.Visible = true;
                     printListButton.Visible = true;
 
-                    //Export blueprint for testing
-                    //MemoryStream blueprintStream = new MemoryStream(blueprint);
-                    //FileStream banana = new FileStream("C:\\Users\\Dan\\Desktop\\blueprints\\" + i + ".blueprint", FileMode.Create, FileAccess.Write);
-                    //blueprintStream.WriteTo(banana);
-
                     i++;
                     progressBar1.Value++;
 
@@ -229,7 +224,6 @@ namespace Sab_Toolbox
                 Blueprints.Sort();
                 binReader1.Dispose();
                 binReader1.Close();
-                //fileInput.SetLength(0);
                 //fileInput.Dispose();
                 //fileInput.Close();
                 GC.Collect();
@@ -404,7 +398,7 @@ namespace Sab_Toolbox
                     string hash = "";
                     for (int i2 = 0; i2 < 4; i2++)
                     {
-                        hash += convertIntToHexByte(blueprintReader1.ReadByte());
+                        hash += Utilities.convertIntToHexByte(blueprintReader1.ReadByte());
                     }
 
                     int dataSize = blueprintReader1.ReadInt32();
@@ -417,7 +411,7 @@ namespace Sab_Toolbox
                     {
                         case 1:
                             dataGridView1.Rows[i].Cells[0].Value = hash;
-                            dataGridView1.Rows[i].Cells[1].Value = convertIntToHexByte(blueprintReader1.ReadByte());
+                            dataGridView1.Rows[i].Cells[1].Value = Utilities.convertIntToHexByte(blueprintReader1.ReadByte());
                             blueprint.Seek(blueprint.Position - 1, 0);
                             dataGridView1.Rows[i].Cells[2].Value = blueprintReader1.ReadByte();
                             dataGridView1.Rows[i].Cells[3].Value = dataSize;
@@ -428,7 +422,7 @@ namespace Sab_Toolbox
                             dataGridView1.Rows[i].Cells[3].Value = dataSize;
                             for(int i2 = 0; i2 < 4; i2++)
                             {
-                                value += convertIntToHexByte(blueprintReader1.ReadByte());
+                                value += Utilities.convertIntToHexByte(blueprintReader1.ReadByte());
                             }
                             blueprint.Seek(blueprint.Position - 4, 0);
                             int integer = blueprintReader1.ReadInt32();
@@ -442,7 +436,7 @@ namespace Sab_Toolbox
                             dataGridView1.Rows[i].Cells[3].Value = dataSize;
                             for (int i2 = 0; i2 < 8; i2++)
                             {
-                                value += convertIntToHexByte(blueprintReader1.ReadByte());
+                                value += Utilities.convertIntToHexByte(blueprintReader1.ReadByte());
                             }
                             dataGridView1.Rows[i].Cells[1].Value = value;
                             break;
@@ -452,7 +446,7 @@ namespace Sab_Toolbox
                             dataGridView1.Rows[i].Cells[3].Value = dataSize;
                             for (int i2 = 0; i2 < 12; i2++)
                             {
-                                value += convertIntToHexByte(blueprintReader1.ReadByte());
+                                value += Utilities.convertIntToHexByte(blueprintReader1.ReadByte());
                             }
 
                             blueprint.Seek(blueprint.Position - 12, 0);
@@ -466,7 +460,7 @@ namespace Sab_Toolbox
                             dataGridView1.Rows[i].Cells[3].Value = dataSize;
                             for (int i2 = 0; i2 < 16; i2++)
                             {
-                                value += convertIntToHexByte(blueprintReader1.ReadByte());
+                                value += Utilities.convertIntToHexByte(blueprintReader1.ReadByte());
                                 if(i2 == 4 || i2 == 8 || i2 == 12)
                                 {
                                     value += " ";
@@ -611,65 +605,6 @@ namespace Sab_Toolbox
 
 
 
-
-        /*
-        * @name Convert Int To Hex Byte
-        * @return string Hex Byte converted from input integer.
-        * @param int The integer to be converted to a Hex byte.
-        */
-        public string convertIntToHexByte(int inputValue)
-        {
-            string finalHexByte = "";
-            if (inputValue > 255 || inputValue < 0)
-            {
-                Console.WriteLine("Input must be between 0 and 255. These are the values one byte can support.");
-            }
-            else
-            {
-                int zeroPlace = inputValue % 16;
-                int inputDiv1 = inputValue / 16;
-
-                int tenthPlace = inputDiv1 % 16;
-                //int inputDiv2 = inputDiv1 / 16;
-
-                //int hundrethPlace = inputDiv2 % 16 * 16;
-
-                finalHexByte += convertIntToHexDigit(tenthPlace) + convertIntToHexDigit(zeroPlace);
-            }
-
-            return finalHexByte;
-        }
-
-        /*
-        * @name Convert Int To Hex Digit
-        * @return string Hex Digit converted from input Integer.
-        * @param int The integer to be converted to Hex.
-        */
-        public string convertIntToHexDigit(int inputValue)
-        {
-            string outputString = "";
-            if (inputValue > 15 || inputValue < 0)
-            {
-                Console.WriteLine("Input value must be between 0 and 15. These are the values a hex digit can represent.");
-            }
-            else
-            {
-                if (inputValue < 10)
-                {
-                    outputString += inputValue;
-                }
-                else
-                {
-                    if (inputValue == 10) { outputString += "A"; }
-                    if (inputValue == 11) { outputString += "B"; }
-                    if (inputValue == 12) { outputString += "C"; }
-                    if (inputValue == 13) { outputString += "D"; }
-                    if (inputValue == 14) { outputString += "E"; }
-                    if (inputValue == 15) { outputString += "F"; }
-                }
-            }
-            return outputString;
-        }
 
 
 
