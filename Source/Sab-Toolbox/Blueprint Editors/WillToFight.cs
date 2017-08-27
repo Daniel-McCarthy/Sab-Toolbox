@@ -37,7 +37,7 @@ namespace Sab_Toolbox
         /* ======================= */
         private void openLoosefilesBinPCpackToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string path = returnGamePath();
+            string path = Sabtool_Settings.returnGamePath();
             switch (path)
             {
                 case "PathInvalid":
@@ -514,50 +514,6 @@ namespace Sab_Toolbox
             }
         }
 
-          /* ==================================== */
-         /* Retrieve Game Location From Settings */
-        /* ==================================== */
-        public static string returnGamePath()
-        {
-            string path = Application.ExecutablePath;
-            path = path.Substring(0, path.Length - 20);
-            path = Path.Combine(path, "settings.txt");
-
-            //Does Settings File Exist?
-            if (File.Exists(path))
-            {
-                //Settings Exist, Now Check Path Setting
-                string[] readText = File.ReadAllLines(path);
-                string pathInput = readText[0];
-                if (pathInput.Length > 5)
-                {
-                    //Check if Path Setting Is Valid
-                    pathInput = pathInput.Substring(5, pathInput.Length - 5);
-                    if (File.Exists(Path.Combine(pathInput, "Saboteur.exe")))
-                    {
-                        //It is, now set up path and image to tell user their path is set.
-                        return pathInput;
-                    }
-                    else
-                    {
-                        //The setting is no longer valid
-                        return "PathInvalid";
-                    }
-
-                }
-                else
-                {
-                    //The setting is no longer valid
-                    return "NoSettingsFile";
-                }
-            }
-            else
-            {
-                //The setting is no longer valid
-                return "NoSettingsFile";
-            }
-        }
-
           /* =============== */
          /* On Window Close */
         /* =============== */
@@ -791,7 +747,7 @@ namespace Sab_Toolbox
             if (listOfFileArrays.Count > 0)
             {
                 //MessageBox.Show(returnGamePath());
-                string path = returnGamePath();
+                string path = Sabtool_Settings.returnGamePath();
                 if (path != "PathInvalid" && path != "NoSettingsFile") //if settings file exists, use it's path to get the loosefiles_BinPC.pack
                 {
                     path += '\\' + "France" + '\\';
