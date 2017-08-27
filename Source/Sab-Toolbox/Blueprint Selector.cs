@@ -16,5 +16,11 @@ namespace Sab_Toolbox
         {
             InitializeComponent();
         }
+
+        private void willToFightButton_Click(object sender, EventArgs e)
+        {
+            WillToFight wtf1 = new WillToFight();
+            wtf1.Show();
+        }
     }
 }

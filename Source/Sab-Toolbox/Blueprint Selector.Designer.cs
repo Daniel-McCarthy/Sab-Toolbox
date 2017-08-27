@@ -65,6 +65,7 @@
             this.willToFightButton.TabIndex = 4;
             this.willToFightButton.Text = "Will To Fight Color Scheme";
             this.willToFightButton.UseVisualStyleBackColor = true;
+            this.willToFightButton.Click += new System.EventHandler(this.willToFightButton_Click);
             // 
             // camerasButton
             // 
