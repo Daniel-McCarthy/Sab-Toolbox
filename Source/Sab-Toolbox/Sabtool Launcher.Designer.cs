@@ -34,7 +34,7 @@
             this.luaScriptsEditor = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.loosefilesEditor = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.editNodesEditor = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -102,17 +102,17 @@
             this.loosefilesEditor.UseVisualStyleBackColor = true;
             this.loosefilesEditor.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
+            // editNodesEditor
             // 
-            this.button5.Enabled = false;
-            this.button5.Location = new System.Drawing.Point(21, 156);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(338, 65);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Edit Nodes";
-            this.toolTip1.SetToolTip(this.button5, "Nodes that modify parts of the map or add to it (.wsd)\r\n");
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.editNodesEditor.Enabled = false;
+            this.editNodesEditor.Location = new System.Drawing.Point(21, 156);
+            this.editNodesEditor.Name = "editNodesEditor";
+            this.editNodesEditor.Size = new System.Drawing.Size(338, 65);
+            this.editNodesEditor.TabIndex = 5;
+            this.editNodesEditor.Text = "Edit Nodes";
+            this.toolTip1.SetToolTip(this.editNodesEditor, "Nodes that modify parts of the map or add to it (.wsd)\r\n");
+            this.editNodesEditor.UseVisualStyleBackColor = true;
+            this.editNodesEditor.Click += new System.EventHandler(this.button5_Click);
             // 
             // label1
             // 
@@ -262,7 +262,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.editNodesEditor);
             this.Controls.Add(this.loosefilesEditor);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.luaScriptsEditor);
@@ -296,7 +296,7 @@
         private System.Windows.Forms.Button luaScriptsEditor;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button loosefilesEditor;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button editNodesEditor;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
