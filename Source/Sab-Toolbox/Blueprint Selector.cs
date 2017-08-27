@@ -28,5 +28,11 @@ namespace Sab_Toolbox
             Weapon weapon1 = new Weapon();
             weapon1.Show();
         }
+
+        private void vehiclesButton_Click(object sender, EventArgs e)
+        {
+            Vehicle vehicle1 = new Vehicle();
+            vehicle1.Show();
+        }
     }
 }

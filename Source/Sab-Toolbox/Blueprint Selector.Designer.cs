@@ -56,6 +56,7 @@
             this.vehiclesButton.TabIndex = 6;
             this.vehiclesButton.Text = "Vehicles";
             this.vehiclesButton.UseVisualStyleBackColor = true;
+            this.vehiclesButton.Click += new System.EventHandler(this.vehiclesButton_Click);
             // 
             // willToFightButton
             // 
