@@ -48,7 +48,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.specialThanksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button6 = new System.Windows.Forms.Button();
+            this.packsEditor = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -231,17 +231,17 @@
             this.specialThanksToolStripMenuItem.Text = "Special Thanks";
             this.specialThanksToolStripMenuItem.Click += new System.EventHandler(this.specialThanksToolStripMenuItem_Click);
             // 
-            // button6
+            // packsEditor
             // 
-            this.button6.Enabled = false;
-            this.button6.Location = new System.Drawing.Point(21, 440);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(338, 65);
-            this.button6.TabIndex = 17;
-            this.button6.Text = "Packs";
-            this.toolTip1.SetToolTip(this.button6, "Generic containers for several types of items (.pack)");
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.packsEditor.Enabled = false;
+            this.packsEditor.Location = new System.Drawing.Point(21, 440);
+            this.packsEditor.Name = "packsEditor";
+            this.packsEditor.Size = new System.Drawing.Size(338, 65);
+            this.packsEditor.TabIndex = 17;
+            this.packsEditor.Text = "Packs";
+            this.toolTip1.SetToolTip(this.packsEditor, "Generic containers for several types of items (.pack)");
+            this.packsEditor.UseVisualStyleBackColor = true;
+            this.packsEditor.Click += new System.EventHandler(this.button6_Click);
             // 
             // toolTip1
             // 
@@ -253,7 +253,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(379, 609);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.packsEditor);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.checkBox1);
@@ -310,7 +310,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem specialThanksToolStripMenuItem;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button packsEditor;
         private System.Windows.Forms.ToolTip toolTip1;
     }
 }
