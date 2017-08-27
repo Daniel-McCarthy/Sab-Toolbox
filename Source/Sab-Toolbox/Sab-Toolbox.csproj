@@ -53,6 +53,12 @@
     <Compile Include="Blueprint Editors\Blueprint Editor.Designer.cs">
       <DependentUpon>Blueprint Editor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Blueprint Editors\Weapon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blueprint Editors\Weapon.Designer.cs">
+      <DependentUpon>Weapon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Blueprint Editors\WillToFight.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     <Compile Include="Utilities.cs" />
     <EmbeddedResource Include="Blueprint Editors\Blueprint Editor.resx">
       <DependentUpon>Blueprint Editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blueprint Editors\Weapon.resx">
+      <DependentUpon>Weapon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Blueprint Editors\WillToFight.resx">
       <DependentUpon>WillToFight.cs</DependentUpon>
