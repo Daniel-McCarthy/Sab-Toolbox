@@ -47,11 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Blueprint Editor.cs">
+    <Compile Include="Blueprint Editors\Blueprint Editor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Blueprint Editor.Designer.cs">
+    <Compile Include="Blueprint Editors\Blueprint Editor.Designer.cs">
       <DependentUpon>Blueprint Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blueprint Selector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blueprint Selector.Designer.cs">
+      <DependentUpon>Blueprint Selector.cs</DependentUpon>
     </Compile>
     <Compile Include="EditNodes Editor.cs">
       <SubType>Form</SubType>
@@ -115,8 +121,11 @@
       <DependentUpon>Sabtool Thanks.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities.cs" />
-    <EmbeddedResource Include="Blueprint Editor.resx">
+    <EmbeddedResource Include="Blueprint Editors\Blueprint Editor.resx">
       <DependentUpon>Blueprint Editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blueprint Selector.resx">
+      <DependentUpon>Blueprint Selector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditNodes Editor.resx">
       <DependentUpon>EditNodes Editor.cs</DependentUpon>
@@ -177,6 +186,7 @@
   <ItemGroup>
     <None Include="Resources\Box3.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
