@@ -98,6 +98,7 @@
             this.Controls.Add(this.camerasButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Blueprint_Selector";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Selector";
             this.ResumeLayout(false);
 
