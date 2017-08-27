@@ -53,6 +53,12 @@
     <Compile Include="Blueprint Editors\Blueprint Editor.Designer.cs">
       <DependentUpon>Blueprint Editor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Blueprint Editors\Vehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blueprint Editors\Vehicle.Designer.cs">
+      <DependentUpon>Vehicle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Blueprint Editors\Weapon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,9 @@
     <Compile Include="Utilities.cs" />
     <EmbeddedResource Include="Blueprint Editors\Blueprint Editor.resx">
       <DependentUpon>Blueprint Editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blueprint Editors\Vehicle.resx">
+      <DependentUpon>Vehicle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Blueprint Editors\Weapon.resx">
       <DependentUpon>Weapon.cs</DependentUpon>
