@@ -34,5 +34,11 @@ namespace Sab_Toolbox
             Vehicle vehicle1 = new Vehicle();
             vehicle1.Show();
         }
+
+        private void camerasButton_Click(object sender, EventArgs e)
+        {
+            Camera camera1 = new Camera();
+            camera1.Show();
+        }
     }
 }

@@ -78,6 +78,7 @@
             this.camerasButton.TabIndex = 7;
             this.camerasButton.Text = "Cameras";
             this.camerasButton.UseVisualStyleBackColor = true;
+            this.camerasButton.Click += new System.EventHandler(this.camerasButton_Click);
             // 
             // generalButton
             // 
