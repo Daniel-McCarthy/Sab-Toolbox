@@ -40,5 +40,11 @@ namespace Sab_Toolbox
             Camera camera1 = new Camera();
             camera1.Show();
         }
+
+        private void generalButton_Click(object sender, EventArgs e)
+        {
+            Blueprint_Editor blueprintEditor1 = new Blueprint_Editor();
+            blueprintEditor1.Show();
+        }
     }
 }

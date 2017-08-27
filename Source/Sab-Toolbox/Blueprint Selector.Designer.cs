@@ -89,6 +89,7 @@
             this.generalButton.TabIndex = 8;
             this.generalButton.Text = "General";
             this.generalButton.UseVisualStyleBackColor = true;
+            this.generalButton.Click += new System.EventHandler(this.generalButton_Click);
             // 
             // Blueprint_Selector
             // 
