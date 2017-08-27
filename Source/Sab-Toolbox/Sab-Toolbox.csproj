@@ -114,6 +114,7 @@
     <Compile Include="Sabtool Thanks.Designer.cs">
       <DependentUpon>Sabtool Thanks.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utilities.cs" />
     <EmbeddedResource Include="Blueprint Editor.resx">
       <DependentUpon>Blueprint Editor.cs</DependentUpon>
     </EmbeddedResource>
