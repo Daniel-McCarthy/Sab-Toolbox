@@ -22,5 +22,11 @@ namespace Sab_Toolbox
             WillToFight wtf1 = new WillToFight();
             wtf1.Show();
         }
+
+        private void weaponsButton_Click(object sender, EventArgs e)
+        {
+            Weapon weapon1 = new Weapon();
+            weapon1.Show();
+        }
     }
 }

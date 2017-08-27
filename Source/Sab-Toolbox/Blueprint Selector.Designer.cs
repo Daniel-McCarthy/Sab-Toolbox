@@ -45,6 +45,7 @@
             this.weaponsButton.TabIndex = 5;
             this.weaponsButton.Text = "Weapons";
             this.weaponsButton.UseVisualStyleBackColor = true;
+            this.weaponsButton.Click += new System.EventHandler(this.weaponsButton_Click);
             // 
             // vehiclesButton
             // 
