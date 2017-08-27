@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sabtool_Launcher));
             this.megapacksEditor = new System.Windows.Forms.Button();
             this.luaScriptsEditor = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.blueprintsEditor = new System.Windows.Forms.Button();
             this.loosefilesEditor = new System.Windows.Forms.Button();
             this.editNodesEditor = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -80,16 +80,16 @@
             this.luaScriptsEditor.UseVisualStyleBackColor = true;
             this.luaScriptsEditor.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // blueprintsEditor
             // 
-            this.button3.Location = new System.Drawing.Point(21, 85);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(338, 65);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Blueprints";
-            this.toolTip1.SetToolTip(this.button3, "Contain the definitions of all game objects (.blueprint)");
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.blueprintsEditor.Location = new System.Drawing.Point(21, 85);
+            this.blueprintsEditor.Name = "blueprintsEditor";
+            this.blueprintsEditor.Size = new System.Drawing.Size(338, 65);
+            this.blueprintsEditor.TabIndex = 3;
+            this.blueprintsEditor.Text = "Blueprints";
+            this.toolTip1.SetToolTip(this.blueprintsEditor, "Contain the definitions of all game objects (.blueprint)");
+            this.blueprintsEditor.UseVisualStyleBackColor = true;
+            this.blueprintsEditor.Click += new System.EventHandler(this.button3_Click);
             // 
             // loosefilesEditor
             // 
@@ -264,7 +264,7 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.editNodesEditor);
             this.Controls.Add(this.loosefilesEditor);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.blueprintsEditor);
             this.Controls.Add(this.luaScriptsEditor);
             this.Controls.Add(this.megapacksEditor);
             this.Controls.Add(this.pictureBox2);
@@ -294,7 +294,7 @@
         #endregion
         private System.Windows.Forms.Button megapacksEditor;
         private System.Windows.Forms.Button luaScriptsEditor;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button blueprintsEditor;
         private System.Windows.Forms.Button loosefilesEditor;
         private System.Windows.Forms.Button editNodesEditor;
         private System.Windows.Forms.Label label1;
