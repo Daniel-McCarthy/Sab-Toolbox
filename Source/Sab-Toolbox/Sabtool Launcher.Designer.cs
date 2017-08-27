@@ -89,7 +89,7 @@
             this.blueprintsEditor.Text = "Blueprints";
             this.toolTip1.SetToolTip(this.blueprintsEditor, "Contain the definitions of all game objects (.blueprint)");
             this.blueprintsEditor.UseVisualStyleBackColor = true;
-            this.blueprintsEditor.Click += new System.EventHandler(this.button3_Click);
+            this.blueprintsEditor.Click += new System.EventHandler(this.blueprintsEditor_Click);
             // 
             // loosefilesEditor
             // 

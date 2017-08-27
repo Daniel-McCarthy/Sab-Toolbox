@@ -221,5 +221,11 @@ namespace Sab_Toolbox
             EditNodes_Editor node1 = new EditNodes_Editor();
             node1.Show();
         }
+
+        private void blueprintsEditor_Click(object sender, EventArgs e)
+        {
+            Blueprint_Selector selector1 = new Blueprint_Selector();
+            selector1.Show();
+        }
     }
 }
