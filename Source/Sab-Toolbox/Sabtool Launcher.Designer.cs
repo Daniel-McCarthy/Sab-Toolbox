@@ -33,7 +33,7 @@
             this.megapacksEditor = new System.Windows.Forms.Button();
             this.luaScriptsEditor = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.loosefilesEditor = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -91,16 +91,16 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // loosefilesEditor
             // 
-            this.button4.Location = new System.Drawing.Point(21, 227);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(338, 65);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Loose files";
-            this.toolTip1.SetToolTip(this.button4, "Contains several misc. files that are placed together for convenience (.pack)\r\n");
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.loosefilesEditor.Location = new System.Drawing.Point(21, 227);
+            this.loosefilesEditor.Name = "loosefilesEditor";
+            this.loosefilesEditor.Size = new System.Drawing.Size(338, 65);
+            this.loosefilesEditor.TabIndex = 4;
+            this.loosefilesEditor.Text = "Loose files";
+            this.toolTip1.SetToolTip(this.loosefilesEditor, "Contains several misc. files that are placed together for convenience (.pack)\r\n");
+            this.loosefilesEditor.UseVisualStyleBackColor = true;
+            this.loosefilesEditor.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -263,7 +263,7 @@
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.loosefilesEditor);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.luaScriptsEditor);
             this.Controls.Add(this.megapacksEditor);
@@ -295,7 +295,7 @@
         private System.Windows.Forms.Button megapacksEditor;
         private System.Windows.Forms.Button luaScriptsEditor;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button loosefilesEditor;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
